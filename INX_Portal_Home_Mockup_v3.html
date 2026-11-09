@@ -1,0 +1,99 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="robots" content="noindex, nofollow"><meta name="viewport" content="width=1480"><title>INX Ink Portal mockup: home page</title><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Liberation Sans", Arial, Helvetica, sans-serif; background: #E9EBEF; color: #1E2433; width: 1440px; height: 900px; padding: 18px; margin: 0 auto; }
+.win { width: 100%; height: 100%; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 24px rgba(0,0,0,.18); display: flex; flex-direction: column; }
+.chrome { flex: none; height: 40px; background: #F1F2F5; border-bottom: 1px solid #DADDE3; display: flex; align-items: center; padding: 0 16px; gap: 8px; }
+.dot { width: 12px; height: 12px; border-radius: 50%; }
+.url { margin-left: 18px; flex: 1; max-width: 560px; height: 26px; border-radius: 13px; background: #fff; border: 1px solid #DADDE3; font-size: 13px; color: #5A6172; display: flex; align-items: center; padding: 0 14px; }
+.nav { flex: none; height: 64px; display: flex; align-items: center; padding: 0 40px; border-bottom: 1px solid #E6E8EC; gap: 30px; }
+.logo { font-weight: 900; font-size: 30px; letter-spacing: 1px; color: #1F2A44; margin-right: 20px; }
+.logo span { font-size: 13px; font-weight: 700; color: #6B7385; letter-spacing: 0; margin-left: 8px; }
+.nav a { font-size: 15px; color: #1E2433; text-decoration: none; font-weight: 600; }
+.nav a.on { color: #D9480F; border-bottom: 3px solid #D9480F; padding-bottom: 19px; margin-top: 22px; }
+.nav .sp { flex: 1; }
+.btn { display: inline-block; border-radius: 6px; padding: 11px 18px; font-size: 15px; font-weight: 700; text-decoration: none; }
+.btn.pri { background: #D9480F; color: #fff; }
+.btn.sec { background: #fff; color: #1F2A44; border: 2px solid #1F2A44; }
+.btn.small { padding: 8px 14px; font-size: 13px; }
+.tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; padding: 4px 8px; border-radius: 4px; }
+
+/* INX brand overrides */
+.nav { background: #002B54; border-bottom: none; }
+.nav a { color: #fff; }
+.nav a.on { color: #fff; border-bottom-color: #5FB4E5; }
+.logo { display: flex; align-items: flex-end; margin-right: 24px; }
+.logo img { height: 34px; display: block; }
+.logo span { color: #A9C4DD; margin-left: 10px; margin-bottom: 2px; }
+.nav .btn.sec { background: transparent; color: #fff; border-color: #fff; }
+.btn.pri { background: #0071BA; }
+</style>
+<style>
+body { height: 950px; }
+.hero { flex: none; display: flex; gap: 44px; padding: 34px 56px 30px; background: linear-gradient(120deg, #003A70 0%, #00589A 100%); color: #fff; }
+.hero .l { flex: 1; padding-top: 14px; }
+.hero h1 { font-size: 46px; line-height: 1.08; font-weight: 800; margin-bottom: 16px; }
+.hero p { font-size: 18px; line-height: 1.45; color: #D6DBE6; max-width: 600px; margin-bottom: 24px; }
+.hero .btns { display: flex; gap: 12px; }
+.btn.ghost { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.7); }
+.paths { width: 500px; background: #fff; color: #1E2433; border-radius: 10px; padding: 20px 22px; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+.paths h3 { font-size: 18px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: baseline; }
+.paths h3 a { font-size: 13px; color: #0071BA; }
+.p { display: flex; gap: 14px; align-items: center; padding: 11px 0; border-top: 1px solid #ECEEF2; }
+.p .th { width: 54px; height: 54px; border-radius: 8px; flex: none; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; font-size: 13px; }
+.p h4 { font-size: 15px; margin-bottom: 3px; }
+.p .m { font-size: 12px; color: #6B7385; }
+.bar { height: 5px; background: #ECEEF2; border-radius: 3px; margin-top: 6px; width: 260px; }
+.bar i { display: block; height: 5px; border-radius: 3px; background: #2E7D6B; }
+.sec { padding: 22px 56px 0; }
+.sec h2 { font-size: 19px; margin-bottom: 12px; }
+.topics { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
+.t { border: 1px solid #E1E4EA; border-radius: 10px; padding: 14px 14px 13px; }
+.t .dot2 { width: 34px; height: 34px; border-radius: 50%; margin-bottom: 9px; }
+.t h4 { font-size: 14px; line-height: 1.25; margin-bottom: 4px; }
+.t p { font-size: 12px; color: #6B7385; line-height: 1.35; }
+.duo { display: flex; gap: 18px; padding: 20px 56px 0; }
+.match { flex: 1.6; background: #EAF4FB; border: 1px solid #BFDDF2; border-radius: 10px; padding: 16px 20px; }
+.match h3 { font-size: 17px; margin-bottom: 3px; }
+.match .s { font-size: 13px; color: #5A6172; margin-bottom: 11px; }
+.mrow { display: flex; gap: 10px; align-items: center; }
+.sel { flex: 1; height: 36px; background: #fff; border: 1px solid #BFDDF2; border-radius: 6px; display: flex; align-items: center; justify-content: space-between; padding: 0 11px; font-size: 13px; color: #6B7385; }
+.sel:after { content: "\25BE"; }
+.cert { flex: 1; border: 1px solid #E1E4EA; border-radius: 10px; padding: 16px 20px; display: flex; gap: 14px; align-items: center; }
+.cert .badge { width: 56px; height: 56px; border-radius: 50%; border: 4px solid #2E7D6B; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #2E7D6B; font-size: 22px; flex: none; }
+.cert h3 { font-size: 16px; margin-bottom: 3px; }
+.cert p { font-size: 13px; color: #5A6172; line-height: 1.35; }
+.strip { margin: 16px 56px 0; border: 1px solid #E1E4EA; border-radius: 10px; padding: 11px 18px; display: flex; align-items: center; justify-content: space-between; font-size: 14px; }
+</style></head><body><div class="win">
+<div class="chrome"><div class="dot" style="background:#FF5F57"></div><div class="dot" style="background:#FEBC2E"></div><div class="dot" style="background:#28C840"></div><div class="url">inxinternational.com/ink-portal</div></div>
+<div class="nav"><div class="logo"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA0NDQuOSAxODguMyI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5zdDAgewogICAgICAgIGZpbGw6ICNmZmY7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0zNDMuNSwxMjQuNmMyLjIsMi4yLDMuMiw0LjgsMy4yLDcuOHMtMS4xLDUuOC0zLjMsNy45Yy0yLjEsMi4xLTQuNywzLjEtNy43LDMuMXMtNS43LTEuMS03LjgtMy4yYy0yLjEtMi4xLTMuMi00LjctMy4yLTcuOHMxLjEtNS45LDMuNC04YzIuMi0yLDQuNy0zLDcuNi0zczUuNiwxLjEsNy44LDMuMlpNMzM1LjcsMTIzLjNjLTIuNSwwLTQuNy45LTYuNSwyLjgtMS44LDEuOC0yLjYsMy45LTIuNiw2LjRzLjksNC43LDIuNyw2LjVjMS44LDEuOCwzLjksMi43LDYuNCwyLjdzNC42LS45LDYuNC0yLjdjMS44LTEuOCwyLjctNCwyLjctNi41cy0uOS00LjYtMi42LTYuNGMtMS44LTEuOC0zLjktMi44LTYuNC0yLjhaTTMzNC4xLDEzNC4ydjQuM2gtMy4ydi0xMi4yYy44LDAsMS45LDAsMy40LDBzMi40LDAsMi41LDBjMSwwLDEuOC4zLDIuNC42LDEuMS42LDEuNiwxLjYsMS42LDIuOXMtLjMsMS44LS45LDIuMi0xLjMuNy0yLjEuOGMuOC4yLDEuMy40LDEuNy43LjcuNiwxLjEsMS41LDEuMSwyLjd2MS4xYzAsLjEsMCwuMiwwLC40czAsLjIsMCwuNHYuM2MuMSwwLTIuOSwwLTIuOSwwLDAtLjQtLjItMS0uMi0xLjdzMC0xLjItLjItMS41Yy0uMi0uNC0uNS0uNy0uOS0uOS0uMiwwLS42LS4yLTEuMS0uMmgtLjdzLS43LDAtLjcsMFpNMzM1LjMsMTMyYy43LDAsMS4zLS4xLDEuOC0uNHMuNi0uOC42LTEuNS0uMy0xLjEtMS0xLjRjLS40LS4yLTEuMS0uMy0xLjktLjNoLS44djMuNWgxLjJaIi8+CiAgPHJlY3QgY2xhc3M9InN0MCIgeD0iMi44IiB5PSIyIiB3aWR0aD0iMjkuMyIgaGVpZ2h0PSIxNDAuMSIvPgogIDxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTQ1LjQgMiAxNzIuOCAyIDE3Mi44IDE0Mi4xIDE0My41IDE0Mi4xIDg2LjUgNDIuMiA4Ni4yIDQyLjIgODYuMiAxNDIuMSA1OC43IDE0Mi4xIDU4LjcgMiA4OS42IDIgMTQ1IDk5LjUgMTQ1LjQgOTkuNSAxNDUuNCAyIi8+CiAgPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIzMTMuOSAxNDIuMSAyNzguMiAxNDIuMSAyNTEuNyA5NC4zIDIyMy40IDE0Mi4xIDE4OS4zIDE0Mi4xIDIzNC41IDcwLjUgMTkxLjggMiAyMjYuNyAyIDI1MS43IDQ3LjIgMjc3LjIgMiAzMTEgMiAyNjguMiA2OS4zIDMxMy45IDE0Mi4xIi8+CiAgPHJlY3QgY2xhc3M9InN0MCIgeD0iMzA3LjgiIHk9IjU4LjUiIHdpZHRoPSIyOS4zIiBoZWlnaHQ9IjI4LjYiLz4KICA8cmVjdCBjbGFzcz0ic3QwIiB4PSIzNTkuOSIgeT0iNTguNSIgd2lkdGg9IjI5LjMiIGhlaWdodD0iMjguNiIvPgogIDxyZWN0IGNsYXNzPSJzdDAiIHg9IjQxMi4yIiB5PSI1OC41IiB3aWR0aD0iMjkuMyIgaGVpZ2h0PSIyOC42Ii8+Cjwvc3ZnPgo=" alt="INX"><span>Ink Portal</span></div>
+<a class="on">Learn</a><a>Find your ink</a><a>Explore applications</a><a>Troubleshooting</a><a>Talk to a rep</a><div class="sp"></div>
+<a class="btn sec small">Rep &amp; dealer sign-in</a></div>
+
+<div class="hero"><div class="l">
+<h1>Learn the inks.<br>Find the right fit.</h1>
+<p>Short, practical lessons on ink technologies, substrates and new applications, from INX's ink experts. Learn at your own pace, any time.</p>
+<div class="btns"><a class="btn pri">Start learning</a><a class="btn ghost">Find your ink</a></div>
+</div>
+<div class="paths"><h3>Popular learning paths <a>See all &rarr;</a></h3>
+<div class="p"><div class="th" style="background:#7A4FB5">UV</div><div><h4>Getting started with UV curable inks</h4><div class="m">6 lessons &middot; about 45 minutes &middot; Certificate</div></div></div>
+<div class="p"><div class="th" style="background:#2E7D6B">WALL</div><div><h4>Moving into wall coverings</h4><div class="m">5 lessons &middot; about 40 minutes &middot; 2 of 5 done</div><div class="bar"><i style="width:40%"></i></div></div></div>
+<div class="p"><div class="th" style="background:#0071BA">WRAP</div><div><h4>Eco-solvent inks for vehicle wraps</h4><div class="m">4 lessons &middot; about 30 minutes &middot; Certificate</div></div></div>
+</div></div>
+
+<div class="sec"><h2>Browse by topic</h2><div class="topics">
+<div class="t"><div class="dot2" style="background:#1F2A44"></div><h4>Ink technologies explained</h4><p>How each ink type works and where it fits</p></div>
+<div class="t"><div class="dot2" style="background:#0071BA"></div><h4>Matching ink to the job</h4><p>Substrates, durability, indoor or outdoor</p></div>
+<div class="t"><div class="dot2" style="background:#2E7D6B"></div><h4>New applications</h4><p>What it takes to add a new product line</p></div>
+<div class="t"><div class="dot2" style="background:#7A4FB5"></div><h4>Switching inks</h4><p>Changing inks in the printer you own</p></div>
+<div class="t"><div class="dot2" style="background:#C2185B"></div><h4>Color and quality</h4><p>Profiles, consistency and print standards</p></div>
+<div class="t"><div class="dot2" style="background:#5A6172"></div><h4>Safety and compliance</h4><p>Handling, emissions and regulations</p></div>
+</div></div>
+
+<div class="duo">
+<div class="match"><h3>Ready to choose? Get a guided ink match</h3><div class="s">Answer three questions. We'll recommend the right INX ink and the lessons to read first.</div>
+<div class="mrow"><div class="sel">Type of printer</div><div class="sel">Your equipment</div><div class="sel">Application</div><a class="btn pri small" style="padding:9px 16px">Match me</a></div></div>
+<div class="cert"><div class="badge">&#10003;</div><div><h3>Earn a certificate</h3><p>Finish a learning path and earn a certificate to show customers. Open to printers, INX reps and dealers.</p></div></div>
+</div>
+
+<div class="strip"><div><b>Press problem right now?</b> &nbsp;Use the INX Troubleshooting Guide app and online guides, now in one place.</div><a class="btn sec small">Open troubleshooting</a></div>
+</div></body></html>
